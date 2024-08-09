@@ -20,15 +20,12 @@ namespace testMtechBack.Data
 
             try
             {
-                // Leer el contenido del archivo JSON
                 string jsonContent = File.ReadAllText(jsonFilePath);
 
-                // Deserializar el contenido JSON en una lista de objetos
                 oUsers = JsonConvert.DeserializeObject<List<UserResponse>>(jsonContent);
             }
             catch (Exception ex)
             {
-                // Manejar posibles errores (como archivo no encontrado o errores de deserialización)
                 Console.WriteLine("Error al leer el archivo JSON: " + ex.Message);
             }
 
